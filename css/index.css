@@ -1,0 +1,249 @@
+main {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: var(--site-color-04);
+    margin-top: 60px;
+    background-image: url(../img/nr1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60vh;
+    z-index: 100;
+}
+
+main .main-intro h1 {
+    font-size: 6.2rem;
+    line-height: 1.25;
+}
+
+main p {
+    font-size: 1.8rem;
+    line-height: 1.9;
+    max-width: 500px;
+}
+
+main a {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    background-color: var(--site-color-01);
+    padding: 0px 20px;
+    width: fit-content;
+}
+
+main a:hover {
+    background-color: var(--site-color-07);
+}
+
+main .main-ideas p {
+    border-left: 4px solid var(--site-color-01);
+    padding-left: 20px;
+    margin: 40px 0;
+}
+
+main .main-ideas p:nth-child(1) {
+  margin-left: 60px;
+}
+
+main .main-ideas p:nth-child(2) {
+    margin-left: 120px;
+}
+
+main .main-intro {
+    padding: 10vh 14vh 3vh 2vh;
+}
+
+main .main-ideas {
+    padding: 3vh 15vh 4vh 0;
+}
+
+/*Category section*/
+
+.index-category {
+    width: 100%;
+    padding: 60px 0;
+    background-color: var(--site-color-03);
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.index-category p{
+    color: #111;
+    text-align: center;
+    padding-bottom: 40px;
+    flex-basis: 100%;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+.index-category-box {
+    width: 25rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(  --site-color-05);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.index-category-box:nth-child(2) {
+    background-image: url(../categories/earrings.jpg);
+
+}
+
+.index-category-box:nth-child(3) {
+  background-image: url(../categories/bracelets.webp);
+}
+
+.index-category-box:nth-child(4) {
+  background-image: url(../categories/neck.webp);
+}
+
+.index-category-box:nth-child(5) {
+  background-image: url(../categories/design.webp);
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--site-color-05);
+    opacity: 0.3;
+    transition: all ease-in-out 200ms;
+}
+
+.index-category-box:hover .dark-overlay{
+    opacity: 0;
+    
+}
+
+.index-category-box h3 {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: -2px 2px 4px #000;
+  z-index: 100;
+}
+
+/*Details section*/
+
+.index-details {
+    width: 100%;
+    padding: 70px 0;
+    background-color: var(--site-color-04);
+    text-align: center; 
+}
+
+.index-details-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.index-details-box{
+    width: 300px;
+    height: 270px;
+}
+
+.index-details-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.index-details-text {
+    flex-basis: 555px;
+}
+
+.index-details-text p {
+   padding: 20px 0;
+}
+
+
+/*MOBILE VERSION*/
+
+@media only screen and (max-width: 600px) {
+
+    main {
+        align-items: flex-end;
+    }
+
+    main .main-intro {
+        padding-bottom: 8vh;
+    }
+
+    main .main-intro h1 {
+        font-size: 3rem;
+        line-height: 1.45;
+        text-align: center;
+    }
+    
+    main p {
+        text-align: center;
+        padding: 0 20px;
+        font-size: 1.6rem;
+        line-height: 1.9;
+    }
+    
+    main a {
+       margin: 30px auto;
+    }
+    
+    main .main-ideas {
+        display: none;
+    }
+
+    /*CATEGORY SECTION*/
+
+    .index-category {
+        padding: 40px 0 20px;
+        row-gap: 10px;
+    }
+    
+    .index-category p{
+        padding-bottom: 20px;
+    }
+    
+    .index-category-box {
+        width: calc(100% - 20px);
+        height: 160px;
+    }
+    
+    /*DETAILS SECTION*/
+    .index-details-flex {
+        row-gap: 20px;
+        flex-wrap: wrap;    
+    }
+    
+    .index-details-box{
+        width: 60%;
+    }
+    
+    .index-details-box img {
+        width: 15%;
+    }
+    .index-details-text {
+        flex-basis: 100%;
+    }
+
+    .index-details-text h2 {
+        text-align: center;
+    }
+
+    .index-details-text p {
+        text-align: center;
+    }
+
+  }
